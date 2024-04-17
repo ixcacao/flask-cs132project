@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,600,600italic,700");
+@import url("https://fonts.googleapis.com/css?family=Raleway:300,300italic,600,600italic,700");
 @import url("fontawesome-all.min.css");
 
 /*
@@ -11,14 +11,59 @@ body {
 	background-image: linear-gradient(to bottom, #34334D, #020122);
 }
 
+.bg-anim:hover {
+	animation: rotate 5s infinite linear;
+}
+
+@keyframes rotate {
+	0% {
+		
+		transform: scaleY(1);
+	}
+	50% {
+		
+		transform: scaleY(1.8);
+	}
+	100% {
+		
+		transform: scaleY(1);
+	}
+	}
+
 .glass-container {
+	scale:.8; opacity: 0.3;
+	-moz-transition: background-color .2s ease-in-out;
+	-webkit-transition: background-color .2s ease-in-out;
+	-ms-transition: background-color .2s ease-in-out;
+	transition: background-color .2s ease-in-out;
+	-webkit-appearance: none;
 	margin: 1em 3em 1em 3em;
 	padding: 8%;
 	background-image: linear-gradient(to bottom right, rgba(255,255,255,0.07), rgba(255,255,255,0));
   	border: 1px solid rgba(255,255,255,0.1);
-	border-radius: 3em;
+	border-radius: 4em;
 	backdrop-filter: blur(30px);
+	animation: fade-in ease forwards;
+	animation-timeline: view();
+	animation-range-start: 0em;
+	animation-range-end: 6em;
 }
+
+.glass-container:hover{
+	background-color: #482364;
+	color: #fff !important;
+}
+
+@keyframes appear {
+	0% {transform:  translate(0px, -0.2em);opacity: 0;}
+	50%{transform:  translate(0px, -0.05em);opacity: 0.9;}
+	100% {opacity: 1;}
+}	
+
+@keyframes fade-in {
+	to {scale: 1; opacity: 1;}
+}
+
 .part {
 	background-color: #1E1D53;
 }
@@ -56,6 +101,7 @@ body {
 }
 
 .title-text {
+	opacity: 0;
 	font-size: x-large;
 	background: -webkit-linear-gradient(left, #EE89FF, #F4FF74);
     -webkit-background-clip: text;
@@ -64,6 +110,7 @@ body {
 	text-align: center;
 	grid-area: 1 / 2 / span 3/ span 3;
 	z-index: 2;
+	animation: appear 0.5s ease-in forwards;
 }
 
 .grid1 > div img {
@@ -72,9 +119,11 @@ body {
 
 
 .title-img {
+	opacity: 0;
 	width: 80%;
 	object-fit:contain;
 	grid-area: 1 / 2/ span 3/ span 3;
+	animation: appear 0.5s ease-in forwards;
 }
 
 /*-------------------------Overview Section---------------------*/
@@ -101,6 +150,7 @@ body {
   	border: 1px solid rgba(255,255,255,0.1);
 	border-radius: 3em;
 	backdrop-filter: blur(30px);
+	z-index: 3;
 }
 
 .prob-statement {
@@ -367,7 +417,7 @@ input, select, textarea {
 		}
 
 	body, input, textarea, select {
-		font-family: 'Open Sans', sans-serif;
+		font-family: 'Raleway', sans-serif;
 		line-height: 1.85em;
 		color: #888;
 		font-weight: 300;
