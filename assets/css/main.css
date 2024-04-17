@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,600,600italic,700");
+@import url("https://fonts.googleapis.com/css?family=Raleway:300,300italic,600,600italic,700");
 @import url("fontawesome-all.min.css");
 
 /*
@@ -7,12 +7,69 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
 
+body {
+	background-image: linear-gradient(to bottom, #34334D, #020122);
+}
+
+.bg-anim:hover {
+	animation: rotate 5s infinite linear;
+}
+
+@keyframes rotate {
+	0% {
+		
+		transform: scaleY(1);
+	}
+	50% {
+		
+		transform: scaleY(1.8);
+	}
+	100% {
+		
+		transform: scaleY(1);
+	}
+	}
+
+.glass-container {
+	scale:.8; opacity: 0.3;
+	-moz-transition: background-color .2s ease-in-out;
+	-webkit-transition: background-color .2s ease-in-out;
+	-ms-transition: background-color .2s ease-in-out;
+	transition: background-color .2s ease-in-out;
+	-webkit-appearance: none;
+	margin: 1em 3em 1em 3em;
+	padding: 8%;
+	background-image: linear-gradient(to bottom right, rgba(255,255,255,0.07), rgba(255,255,255,0));
+  	border: 1px solid rgba(255,255,255,0.1);
+	border-radius: 4em;
+	backdrop-filter: blur(30px);
+	animation: fade-in ease forwards;
+	animation-timeline: view();
+	animation-range-start: 0em;
+	animation-range-end: 6em;
+}
+
+.glass-container:hover{
+	background-color: #482364;
+	color: #fff !important;
+}
+
+@keyframes appear {
+	0% {transform:  translate(0px, -0.2em);opacity: 0;}
+	50%{transform:  translate(0px, -0.05em);opacity: 0.9;}
+	100% {opacity: 1;}
+}	
+
+@keyframes fade-in {
+	to {scale: 1; opacity: 1;}
+}
+
 .part {
 	background-color: #1E1D53;
 }
 
 .blur {
-	filter: blur(25px);
+	filter: blur(35px);
 }
 .grid1 {
 	width: 100%;
@@ -27,8 +84,8 @@
 }
 
 .bg-img1 {
-	width: 170%;
-	margin-left: -10em;
+	width: 190%;
+	margin-left: -30em;
 	margin-bottom:-10em;
 	grid-area: 2 / 1/ span 2 / span 2;
 	overflow: hidden;  /* NEW */
@@ -36,14 +93,15 @@
 }
 
 .bg-img2 {
-	width: 170%;
-	margin-top: -25em;
+	width: 100%;
+	margin-top: -22em;
 	grid-area: 1 / 4 / span 2 / span 2;
 	overflow: hidden;  /* NEW */
     min-width: 0;      /* NEW; needed for Firefox */
 }
 
 .title-text {
+	opacity: 0;
 	font-size: x-large;
 	background: -webkit-linear-gradient(left, #EE89FF, #F4FF74);
     -webkit-background-clip: text;
@@ -52,6 +110,7 @@
 	text-align: center;
 	grid-area: 1 / 2 / span 3/ span 3;
 	z-index: 2;
+	animation: appear 0.5s ease-in forwards;
 }
 
 .grid1 > div img {
@@ -60,9 +119,11 @@
 
 
 .title-img {
+	opacity: 0;
 	width: 80%;
 	object-fit:contain;
 	grid-area: 1 / 2/ span 3/ span 3;
+	animation: appear 0.5s ease-in forwards;
 }
 
 /*-------------------------Overview Section---------------------*/
@@ -73,7 +134,7 @@
 	grid-template-columns: 1fr 1fr 1fr 1fr;
 	grid-template-rows: 1fr 1fr 1fr;
 	place-items: center;
-	/*border: 5px solid #DA2713;*/
+	
 	min-height: 0;  /* NEW */
     min-width: 0;   /* NEW; needed for Firefox */
 }
@@ -81,9 +142,15 @@
 	max-width: 100%;
 }
 .overview {
-	padding: 5%;
 	grid-area: 1 / 1 / span 2/ span 2;
 	text-align: left;
+	margin-left: 1em;
+	padding: 8%;
+	background-image: linear-gradient(to bottom right, rgba(255,255,255,0.07), rgba(255,255,255,0));
+  	border: 1px solid rgba(255,255,255,0.1);
+	border-radius: 3em;
+	backdrop-filter: blur(30px);
+	z-index: 3;
 }
 
 .prob-statement {
@@ -101,7 +168,8 @@
 
 .bg-img3 {
 	width: 100%;
-	grid-area: 2 / 2;
+	margin-left: -15em;
+	grid-area: 2 / 2 / span 2/ span 2;
 	overflow: hidden;  /* NEW */
     min-width: 0;      /* NEW; needed for Firefox */
 }
@@ -349,7 +417,7 @@ input, select, textarea {
 		}
 
 	body, input, textarea, select {
-		font-family: 'Open Sans', sans-serif;
+		font-family: 'Raleway', sans-serif;
 		line-height: 1.85em;
 		color: #888;
 		font-weight: 300;
@@ -475,7 +543,8 @@ input, select, textarea {
 /* Container */
 
 	.container {
-		margin: 0;
+		
+		margin: 0 auto;
 		max-width: calc(100% - 50px);
 		width: 1200px;
 	}
@@ -1916,10 +1985,6 @@ input, select, textarea {
 	input[type="reset"],
 	button,
 	.button {
-		background-image: url("images/bg.png"), -moz-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2));
-		background-image: url("images/bg.png"), -webkit-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2));
-		background-image: url("images/bg.png"), -ms-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2));
-		background-image: url("images/bg.png"), linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2));
 		-moz-transition: background-color .2s ease-in-out;
 		-webkit-transition: background-color .2s ease-in-out;
 		-ms-transition: background-color .2s ease-in-out;
@@ -1927,20 +1992,18 @@ input, select, textarea {
 		-webkit-appearance: none;
 		position: relative;
 		display: inline-block;
-		color: #fff !important;
+		color: #74418D !important;
 		text-decoration: none;
 		font-weight: 700;
 		border: 0;
 		outline: 0;
 		cursor: pointer;
-		border-radius: 8px;
-		text-shadow: -1px -1px 0.5px rgba(0, 0, 0, 0.5);
 		overflow: hidden;
-		box-shadow: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.5), inset 0px 2px 1px 0px rgba(255, 255, 255, 0.75);
-		background-color: #43B3E0;
+		background-color: #F4FF74;
 		padding: 1em 2.35em 1em 2.35em;
 		font-size: 1.1em;
 		max-width: 24em;
+		border-radius: 3em;
 	}
 
 		input[type="button"]:hover,
@@ -1948,7 +2011,7 @@ input, select, textarea {
 		input[type="reset"]:hover,
 		button:hover,
 		.button:hover {
-			background-color: #43bff0;
+			background-color: #74418D;
 			color: #fff !important;
 		}
 
@@ -2243,16 +2306,16 @@ input, select, textarea {
 
 		.wrapper.style1 {
 			background-image: none;
-			background-color: #1E1D53;
+			/*background-color: #1E1D53;*/
 		}
 
 		.wrapper.style2 {
-			background-color: #1E1D53;
+			/*background-color: #1E1D53;*/
 			color: #fff;
 		}
 
 		.wrapper.style3 {
-			background-color: #1E1D53;
+			/*background-color: #1E1D53;*/
 			color: #fff;
 		}
 
@@ -2284,7 +2347,8 @@ input, select, textarea {
 /* Nav */
 
 	#nav {
-		background-color: #282828;
+		backdrop-filter: blur(15px);
+		border-bottom: 1px solid rgba(255, 255, 255, 0.4);
 		text-align: center;
 		position: fixed;
 		left: 0;
@@ -2444,7 +2508,7 @@ input, select, textarea {
 		/* Wrappers */
 
 			.wrapper {
-				padding: 5em 0 5em 0;
+				padding: 0em 0 0em 0;
 				text-align: center;
 			}
 
