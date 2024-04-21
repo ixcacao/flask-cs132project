@@ -6,22 +6,37 @@
 	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
+
+.icon {
+	width: 20%;
+	padding: 4%;
+}
+
+.gradient-text {
+	background: -webkit-linear-gradient(left, #EE89FF, #F4FF74);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
 .du30 {
-	width: 30%;
+	width: 25%;
 	grid-area: 1 / 1/ span 1 / span 1;
 	z-index: 5;
 }
+
+
 .gridbg {
 	display: grid;
 	grid-template-columns: 1fr ;
 	grid-template-rows: 1fr 1fr;
 	place-items: center;
-	margin: 0em 7em 0em 7em;
+	margin: 0em 12em 0em 12em;
 }
 .bgtext {
 	grid-area: 2 / 1/ span 1 / span 1;
 	z-index: 5;
 }
+
+
 
 body {
 	background-image: linear-gradient(to bottom, #34334D, #020122);
@@ -57,10 +72,28 @@ h4 {
 	-ms-transition: background-color .2s ease-in-out;
 	transition: background-color .2s ease-in-out;
 	-webkit-appearance: none;
-	padding: 8%;
+	padding: 6%;
 	background-image: linear-gradient(to bottom right, rgba(255,255,255,0.07), rgba(255,255,255,0.01),rgba(255,255,255,0));
   	border: 1px solid rgba(255,255,255,0.1);
-	border-radius: 4em;
+	border-radius: 2em;
+	backdrop-filter: blur(30px);
+	animation: fade-in ease forwards;
+	animation-timeline: view();
+	animation-range-start: 0em;
+	animation-range-end: 6em;
+}
+
+.glass-container-no-padding {
+	scale:.8; opacity: 0.3;
+	-moz-transition: background-color .2s ease-in-out;
+	-webkit-transition: background-color .2s ease-in-out;
+	-ms-transition: background-color .2s ease-in-out;
+	transition: background-color .2s ease-in-out;
+	-webkit-appearance: none;
+	padding: 1% 6% 0% 6%;
+	background-image: linear-gradient(to bottom right, rgba(255,255,255,0.07), rgba(255,255,255,0.01),rgba(255,255,255,0));
+  	border: 1px solid rgba(255,255,255,0.1);
+	border-radius: 2em;
 	backdrop-filter: blur(30px);
 	animation: fade-in ease forwards;
 	animation-timeline: view();
@@ -183,18 +216,35 @@ h4 {
 	padding: 6%;
 	background-image: linear-gradient(to bottom right, rgba(255,255,255,0.07), rgba(255,255,255,0));
   	border: 1px solid rgba(255,255,255,0.1);
-	border-radius: 3em;
+	border-radius: 2em;
 	backdrop-filter: blur(30px);
 	z-index: 3;
 }
 
-.prob-statement, .prob-statement2 {
-	margin-right: 4em;
-	padding: 5%;
-	text-align: end;
-	grid-area: 3 / 2 / span 1/ span 3;
+.vertical-margin {
+	margin: 6em auto;
+	text-align: center;
 }
 
+.dim {
+	color: #422f6e;
+}
+.prob-statement{
+	margin-right: 7em;
+	margin-left: 7em;
+	margin-top: 3em;
+	padding: 5%;
+	text-align: center;
+	grid-area: 3 / 2 / span 1/ span 3;
+}
+.prob-statement2 {
+	margin-right: 7em;
+	margin-left: 7em;
+	margin-top: 0em;
+	padding: 5%;
+	text-align: center;
+	grid-area: 3 / 2 / span 1/ span 3;
+}
 .overview-img { /*this is a div btw*/
 	width: 45%;
 	grid-area: 1 / 3 / span 2/ span 2;
