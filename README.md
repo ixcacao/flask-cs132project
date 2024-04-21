@@ -1,1 +1,1 @@
-[TEMP] Repository for Group Flask' CS 132 Introduction to Data Science Project
+Repository for Group Flask' CS 132 Introduction to Data Science Project
