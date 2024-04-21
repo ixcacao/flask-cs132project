@@ -22,8 +22,6 @@
 	grid-area: 1 / 1/ span 1 / span 1;
 	z-index: 5;
 }
-
-
 .gridbg {
 	display: grid;
 	grid-template-columns: 1fr ;
@@ -35,21 +33,15 @@
 	grid-area: 2 / 1/ span 1 / span 1;
 	z-index: 5;
 }
-
-
-
 body {
 	background-image: linear-gradient(to bottom, #34334D, #020122);
 }
-
 h4 {
 	font-size: xx-large;
 }
-
 .bg-anim:hover {
 	animation: rotate 5s infinite linear;
 }
-
 @keyframes rotate {
 	0% {
 		
@@ -64,7 +56,6 @@ h4 {
 		transform: scaleY(1);
 	}
 	}
-
 .glass-container {
 	scale:.8; opacity: 0.3;
 	-moz-transition: background-color .2s ease-in-out;
@@ -82,7 +73,6 @@ h4 {
 	animation-range-start: 0em;
 	animation-range-end: 6em;
 }
-
 .glass-container-no-padding {
 	scale:.8; opacity: 0.3;
 	-moz-transition: background-color .2s ease-in-out;
@@ -100,22 +90,18 @@ h4 {
 	animation-range-start: 0em;
 	animation-range-end: 6em;
 }
-
 .glass-container:hover{
 	background-color: #482364;
 	color: #fff !important;
 }
-
 @keyframes appear {
 	0% {transform:  translate(0px, -0.3em);opacity: 0;}
 	50%{transform:  translate(0px, -0.05em);opacity: 0.9;}
 	100% {opacity: 1;}
 }	
-
 @keyframes fade-in {
 	to {scale: 1; opacity: 1;}
 }
-
 .part {
 	background-color: #1E1D53;
 }
@@ -152,8 +138,16 @@ h4 {
 	overflow: hidden;  /* NEW */
     min-width: 0;      /* NEW; needed for Firefox */
 }
+.secondary{
+	font-weight: 200;
+}
+
+.lowmargin {
+	margin-bottom: 0.4em;
+}
 
 .title-text {
+	
 	opacity: 0;
 	font-size: large;
 	background: -webkit-linear-gradient(left, #EE89FF, #F4FF74);
