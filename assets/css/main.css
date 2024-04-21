@@ -147,7 +147,6 @@ h4 {
 }
 
 .title-text {
-	
 	opacity: 0;
 	font-size: large;
 	background: -webkit-linear-gradient(left, #EE89FF, #F4FF74);
@@ -155,7 +154,7 @@ h4 {
     -webkit-text-fill-color: transparent;
 	width: 100%;
 	text-align: center;
-	grid-area: 1 / 2 / span 3/ span 3;
+	grid-area: 1 / 2 / span 1/ span 3;
 	z-index: 2;
 	animation: appear 0.5s ease-in forwards;
 }
@@ -166,6 +165,7 @@ h4 {
 
 
 .title-img {
+	margin-top: 3em;
 	margin-left:3em;
 	opacity: 0;
 	width: 80%;
