@@ -12,6 +12,11 @@
 	padding: 4%;
 }
 
+
+.center-box {
+	margin: 12em;
+}
+
 .gradient-text {
 	background: -webkit-linear-gradient(left, #EE89FF, #F4FF74);
     -webkit-background-clip: text;
@@ -27,7 +32,7 @@
 	grid-template-columns: 1fr ;
 	grid-template-rows: 1fr 1fr;
 	place-items: center;
-	margin: 0em 12em 0em 12em;
+	margin: 0em 14em 0em 14em;
 }
 .bgtext {
 	grid-area: 2 / 1/ span 1 / span 1;
@@ -91,7 +96,7 @@ h4 {
 	animation-range-end: 6em;
 }
 .glass-container:hover{
-	background-color: #482364;
+	background-color: #201441;
 	color: #fff !important;
 }
 @keyframes appear {
