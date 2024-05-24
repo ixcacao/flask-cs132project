@@ -18,7 +18,7 @@
 				<ul class="container nav-content">
 					<li><a href="#top">Top</a></li>
 					<li><a href="#background">Background</a></li>
-					<li><a href="#overview1">Overview</a></li>
+					
 					<li><a href="#data">Data</a></li>
 					<li><a href="#methods">Methods</a></li>
 					<li><a href="#results">Results</a></li>
@@ -83,8 +83,10 @@
 					<div class="overview-img">
 						
 					</div>
-					<div class="prob-statement gradient-text">
-						<h2>
+					
+					<div class="prob-statement">
+						<h3>RQ-1</h3>
+						<h2 class="gradient-text">
 							What is the predicted correlation between agriculture industry input and industry outputs of Mindanao if it chooses to separate from the Philippines, based on GDP and the input-output model of the Philippines?
 						</h2>
 					</div>
@@ -141,8 +143,10 @@
 					</div>
 					<div class="blur bg-img3"><img src="images/circle-bg.png" alt="" /></div>
 				</div>
-				<div class="prob-statement2 gradient-text">
-					<h2>
+				
+				<div class="prob-statement2">
+					<h3>RQ-2</h3>
+					<h2 class="gradient-text">
 						How does correlation between agriculture industry input and industry outputs of the Philippines differ across other developing countries?
 					</h2>
 				</div>
@@ -189,6 +193,10 @@
 				<h2 class="data-title">Data</h2>
 				<div class="grid4">
 					<div class="glass-container data">
+						<div class="search-container">
+							<img class="search-icon" src="images/search.png" alt="" />
+						</div>
+						
 						<p>
 							Data collection was done through searching online 
 							repositories for publicly available data. 
@@ -224,9 +232,13 @@
 				<div style="text-align: center; margin-top: 12em;">
 					<h2>Methods</h2>
 				</div>
-				<div class="glass-container horizontal-center" style="padding: 100px; padding-bottom: 10px;">
-					<p>For <strong>research question 1</strong>, we first aggregated the industries in the national input-output table from ADB so that it matches the industries in the Mindanao dataset provided by PSA. Next, we used the technique illustrated in this <a href="https://onlinelibrary.wiley.com/doi/full/10.1111/pirs.12692?fbclid=IwAR3zyeG_NkIaXIrrod3xeMwno4UnWd87i1zIVJLfOaYKxfvfvCt46V79Cao">study</a>, which is described by the diagram below:
+				<div class="grid6">
+				<div class="glass-container horizontal-center method1">
+					<p>For <strong>research question 1</strong>, we first aggregated the industries in the national input-output table from ADB so that it matches the industries in the Mindanao dataset provided by PSA. Next, we used the technique illustrated in this <a href="https://onlinelibrary.wiley.com/doi/full/10.1111/pirs.12692?fbclid=IwAR3zyeG_NkIaXIrrod3xeMwno4UnWd87i1zIVJLfOaYKxfvfvCt46V79Cao">study</a>, described by the diagram below:
 					</p>
+					<div class="diagram">
+					<img  class="diagram-img" src="images/diagram.png" alt="Heatmap of agriculture input correlations in SEA countries" />
+					</div>
 					<p>We picked CLQ over the other locational quotients since the data available is only enough to create the CLQ as the interregional data needed for the FLQ was not found.
 					</p>
 					<p>Once the regional input-output table was obtained, <strong>Pearson correlation</strong> was done between the Input from the Agriculture Industry to the different Industries and the Output of said Industries
@@ -234,20 +246,27 @@
 						<li><strong>6 matching industries</strong> and the <strong>aggregated other industries</strong> are shown (total 7)</li>
 					</p>
 				</div>
+				
+			</div>
+
+
+				<h3 class="top-margin">Heatmap of SEA and Mindanao Correlations: Aggregated Industries</h3>
 				<img  class="plot" src="images/rq1-plotf.png" alt="Heatmap of agriculture input correlations in SEA countries + mindanao (aggregated)" />
-				<div class="glass-container center-box" style="padding: 100px;">
+				<div class="glass-container method1">
 					<p>Likewise for <strong>research question 2</strong>, Pearson correlation was done between the Input from the Agriculture Industry to the different Industries and the Output of said Industries for each country. 
 						<li>All <strong>35 Industries</strong> are shown</li>
+	
 					</p>
 				</div>
-				<img  class="plot" src="images/rq2-plotf.png" alt="Heatmap of agriculture input correlations in SEA countries" />
+				<h3 class="margin-top">Heatmap of SEA Correlations: Input from agriculture to industry and industry output</h3>
+				<img  class="plot2" src="images/rq2-plotf2.png" alt="Heatmap of agriculture input correlations in SEA countries" />
 			</article>
 		<!-- Results -->
 		<article id="results" class="wrapper style3">
 			<div style="text-align: center; margin-top: 50px;">
 				<h2>Results</h2>
 			</div>
-			<div class="glass-container center-box">
+			<div class="glass-container horizontal-center left-align">
 				To <strong>test the hypothesis for research question 2</strong>, we set and did the following measures:
 					<p>
 						<li>Confidence level: 99%</li>
