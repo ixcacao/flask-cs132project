@@ -15,6 +15,12 @@
 	margin-top: 6em;
 }
 
+.nutshell {
+	border: 5px solid #422f6e;
+	max-width: 80%;
+	border-radius: 3%;
+}
+
 .search-icon {
 	display:block;
 	margin: auto;
