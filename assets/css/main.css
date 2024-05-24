@@ -396,8 +396,8 @@ h4 {
 	width: 100%;
 	display: grid;
 	gap: 0;
-	grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-	grid-template-rows: 1fr 1fr 1fr;
+	grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+	grid-template-rows: 1fr 1fr;
 	place-items: center;
 	/*border: 5px solid #DA2713;*/
 	min-height: 0;  /* NEW */
@@ -414,32 +414,57 @@ h4 {
 }
 
 .grid5 > div img {
-	max-width: 100%;
+	max-width: 60%;
+}
+
+.team-text {
+	font-size: smaller;
 }
 
 
 .bg-img7 {
 	width: 100%;
-	grid-area: 2 / 2 / span 3/ span 3;
+	grid-area: 1 / 2 / span 2/ span 3;
 	overflow: hidden;  /* NEW */
     min-width: 0;      /* NEW; needed for Firefox */
 }
 .teammate1 {
-	width: 50%;
+	width: 70%;
 	object-fit:contain;
-	grid-area: 2 / 2;
+	grid-area: 1 / 2/ span 1/ span 2;
 	z-index: 2;
 }
 .teammate2 {
-	width: 50%;
+	width: 70%;
 	object-fit:contain;
-	grid-area: 2 / 3;
+	grid-area: 1 / 4/ span 1/ span 2;
 	z-index: 2;
 }
 .teammate3 {
-	width: 50%;
+	width: 70%;
 	object-fit:contain;
-	grid-area: 2 / 4;
+	grid-area: 1 / 6/ span 1/ span 2;
+	z-index: 2;
+}
+.team-desc-1 {
+	padding-left: 2em;
+	padding-right: 2em;
+	align-self:first baseline;
+	grid-area: 2 / 2/ span 1/ span 2;
+	z-index: 2;
+}
+.team-desc-2 {
+	padding-left: 2em;
+	padding-right: 2em;
+	align-self:first baseline;
+	grid-area: 2 / 4/ span 1/ span 2;
+	z-index: 2;
+}
+.team-desc-3 {
+	padding-left: 2em;
+	padding-right: 2em;
+	align-self:first baseline;
+	grid-area: 2 / 6/ span 1/ span 2;
 	z-index: 2;
 }
 
