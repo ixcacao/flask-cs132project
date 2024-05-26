@@ -318,9 +318,9 @@ h4 {
 }
 
 .bg-img3 {
-	width: 10%;
+	width: 50%;
 	margin-left: -15em;
-	grid-area: 1 / 4 / span 1/ span 3;
+	grid-area: 1 / 1 / span 1/ span 3;
 	overflow: hidden;  /* NEW */
     min-width: 0;      /* NEW; needed for Firefox */
 }
@@ -397,8 +397,8 @@ h4 {
 }
 
 .bg-img6 {
-	width: 100%;
-	grid-area: 1 / 2 / span 1/ span 1;
+	width: 40%;
+	grid-area: 1 / 1 / span 1/ span 2;
 	overflow: hidden;  /* NEW */
     min-width: 0;      /* NEW; needed for Firefox */
 }
@@ -435,7 +435,8 @@ h4 {
 }
 
 .view-button {
-	margin: 6em;
+	margin-top: 2em;
+	margin-bottom:12em;
 	/*grid-area: 2 / 3;*/
 }
 
@@ -2624,7 +2625,7 @@ input, select, textarea {
 
 			#nav a:hover {
 				color: #fff !important;
-				background: #383838;
+				background: #201441;
 			}
 
 			#nav a.active {
