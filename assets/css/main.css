@@ -2833,7 +2833,7 @@ input, select, textarea {
 			}
 			.overview {
 				grid-area: 2 / 1/ span 1/ span 1;
-				margin: auto 1.5em;
+				margin: auto 4em;
 			}
 			.prob-statement{
 				margin-right: 1em;
@@ -2850,33 +2850,175 @@ input, select, textarea {
 				visibility: hidden;
 			}
 
+			/*-----------------------grid bg---------------------------------*/
+			
+			.gridbg {
+				display: grid;
+				grid-template-columns: 1fr;
+				grid-template-rows: auto;
+				place-items: center;
+				margin: 0em 4em 0em 4em;
+			}
+
+			.bgtext {
+				padding: 3em 1.3em 3em 1.3em;
+				grid-area: 1 / 1/ span 1 / span 1;
+				z-index: 5;
+				text-align: left;
+			}
+
+			.du30 {
+				width: 0%;
+				grid-area: 1 / 1/ span 1 / span 1;
+				z-index: 5;
+			}
+
 			/*-----------------------grid 3---------------------------------*/
+
 			.grid3 {
 				grid-template-columns: 1fr;
 				grid-template-rows: 1fr 1fr 1fr;
 				place-items: center;
 				
 			}
+
+
 			.bg-img4 {
 				grid-area: 1 / 1/ span 1/ span 1;
 				visibility: hidden;
 			}
 			.solution {
 				width: 80%;
-				margin-left: 1em;
+				margin-left: 0em;
 				grid-area: 1 / 1/ span 1/ span 1;
 			}
 			.hypothesis {
-				margin-right: 1em;
+				margin-right: 0em;
 				width: 80%;
 				grid-area: 2 / 1/ span 1/ span 1;
 			}
 			.null-hypothesis {
-				margin-right: 1em;
+				margin-right: 0em;
 				width: 80%;
 				grid-area: 3 / 1/ span 1/ span 1;
 			}
 			
+			/*-----------------------grid 4---------------------------------*/
+
+			.grid4 {
+				grid-template-columns: 1fr;
+				grid-template-rows: 1fr 1fr 1fr;
+				
+			}
+			.data {
+				text-align:left;
+				grid-area: 1 / 1 / span 1/ span 1;
+				margin: 1em 4em 1em 4em;
+				z-index : 2;
+			}
+			
+			.keyword {
+				width:70%;
+				margin-left: 6em;
+				padding: 5%;
+				text-align: center;
+				grid-area: 2 / 1 / span 1/ span 1;
+				z-index: 2;
+				overflow: hidden;  /* NEW */
+				min-width: 0;      /* NEW; needed for Firefox */
+			}
+			
+			.sources {
+				margin-right: 6em;
+				width: 40%;
+				grid-area: 3 / 1 / span 1/ span 1;
+				overflow: hidden;  /* NEW */
+				min-width: 0;      /* NEW; needed for Firefox */
+				z-index: 2;
+			}
+			
+			.bg-img5 {
+				width: 0%;
+				grid-area: 2 / 1 / span 1/ span 1;
+				overflow: hidden;  /* NEW */
+				min-width: 0;      /* NEW; needed for Firefox */
+			}
+			
+			.bg-img6 {
+				width: 0%;
+				grid-area: 1 / 1 / span 1/ span 1;
+				overflow: hidden;  /* NEW */
+				min-width: 0;      /* NEW; needed for Firefox */
+			}
+
+			/*-----------------------plots---------------------------------*/
+
+			.horizontal-center {
+				margin-left: 5em;
+				margin-right: 5em;
+			}
+
+			.method1 {
+				text-align: left;
+				/*grid-area: 1 / 3 / span 1/ span 3;*/
+				margin-right: 5em;
+				margin-left: 5em;
+				padding: 5%;
+			}
+
+			/*-----------------------grid 5---------------------------------*/
+			.grid5 {
+				width: 100%;
+				display: grid;
+				gap: 0;
+				grid-template-columns: 1fr;
+				grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+				place-items: center;
+				/*border: 5px solid #DA2713;*/
+				min-height: 0;  /* NEW */
+				min-width: 0;   /* NEW; needed for Firefox */
+			}
+
+			.teammate1 {
+				width: 40%;
+				object-fit:contain;
+				grid-area: 1 / 1/ span 1/ span 1;
+				z-index: 2;
+			}
+			.teammate2 {
+				width: 40%;
+				object-fit:contain;
+				grid-area: 3/ 1/ span 1/ span 1;
+				z-index: 2;
+			}
+			.teammate3 {
+				width: 40%;
+				object-fit:contain;
+				grid-area: 5 / 1/ span 1/ span 1;
+				z-index: 2;
+			}
+			.team-desc-1 {
+				padding-left: 8em;
+				padding-right: 8em;
+				align-self:first baseline;
+				grid-area: 2 / 1/ span 1/ span 1;
+				z-index: 2;
+			}
+			.team-desc-2 {
+				padding-left: 8em;
+				padding-right: 8em;
+				align-self:first baseline;
+				grid-area: 4 / 1/ span 1/ span 1;
+				z-index: 2;
+			}
+			.team-desc-3 {
+				padding-left: 8em;
+				padding-right: 8em;
+				align-self:first baseline;
+				grid-area: 6 / 1/ span 1/ span 1;
+				z-index: 2;
+			}
+
 			body {
 				padding-top: 44px;
 			}
